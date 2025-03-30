@@ -1,0 +1,131 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* 添加背景图片 */
+    background-image: url('https://n.sinaimg.cn/sinakd20108/290/w1080h810/20230117/cc75-0e0c693e044593d7f0ad5c54ecad48e3.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* 头部样式 */
+header {
+    background-color: rgba(176, 168, 241, 0.8); /* 半透明背景 */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    /* 盒模型：外边距 */
+    margin-bottom: 20px;
+    /* 动画效果：淡入 */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 导航栏样式 */
+nav {
+    background-color: rgba(51, 51, 51, 0.8); /* 半透明背景 */
+    /* 布局：固定顶部 */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    /* 盒模型：边框 */
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(85, 85, 85, 0.8); /* 半透明背景 */
+    border-color: white;
+}
+
+/* 主体内容样式 */
+main {
+    padding: 20px;
+    /* 布局：使用网格布局 */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+#hero {
+    text-align: center;
+    /* 盒模型：内边距和边框 */
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+    /* 动画效果：缩放 */
+    animation: scaleIn 0.5s ease-in-out;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+#hero img {
+    max-width: 100%;
+    height: auto;
+    /* 盒模型：外边距 */
+    margin-bottom: 10px;
+}
+
+#about {
+    margin-top: 20px;
+    /* 盒模型：内边距和边框 */
+    padding: 20px;
+    border: 1px solid #d37272;
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+    /* 动画效果：从左侧滑入 */
+    animation: slideInLeft 1s ease-in-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* 页脚样式 */
+footer {
+    background-color: rgba(51, 51, 51, 0.8); /* 半透明背景 */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
